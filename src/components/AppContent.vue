@@ -29,10 +29,10 @@ export default {
 <div class="content">
     
     <div class="select-container">
-        <select name="archetype" id="">
-            <option value="alien">Alien</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+        <select v-model="select" name="archetype" id="">
+            <option value="Alien">Alien</option>
+            <option value="Melodious">Melodious</option>
+            <option value="Noble Knight">Noble Knight</option>
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
@@ -57,7 +57,7 @@ export default {
   padding-top: 35px;
 
   .select-container{
-    width:75%;
+    width:85%;
     margin: 0 auto;
     padding-left: 20px;
   }
@@ -74,7 +74,7 @@ export default {
   }
 
   .inner-container{
-    width: 75%;
+    width: 85%;
     margin: 0 auto;
 
     padding: 70px;
