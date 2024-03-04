@@ -31,16 +31,29 @@ export default {
         <option value="4">4</option>
         <option value="5">5</option>
     </select>
-    <CardItem></CardItem>
+    <ul>
+        <CardItem v-for="currentCard in store.cards"
+                :card="currentCard"></CardItem>
+    </ul>
+    
 </div>
 
 </template>
 
 <style lang="scss">
+@use '../styles/variables' as *;
 .content{
   background-color: orange;
   select{
     display: block;
   }
+  ul {
+    list-style-type: none;
+
+    display: flex;
+    flex-flow: row wrap;
+    
+    gap: $cardsGap;
+}
 }
 </style>
