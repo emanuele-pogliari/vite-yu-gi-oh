@@ -15,14 +15,14 @@ export default {
 
       store,
       isLoading: true,
-      select:"Alien",
+
     }
   },
 
   created() {
     
     axios
-      .get(`https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=${this.select}&num=20&offset=0`)    
+      .get(`https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0`)    
       .then(res => {
         console.dir(res.data.data)
         this.store.cards = res.data.data

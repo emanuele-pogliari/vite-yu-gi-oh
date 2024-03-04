@@ -29,10 +29,10 @@ export default {
 <div class="content">
     
     <div class="select-container">
-        <select v-model="select" name="archetype" id="">
+        <select name="archetype" id="">
             <option value="Alien">Alien</option>
-            <option value="Melodious">Melodious</option>
-            <option value="Noble Knight">Noble Knight</option>
+            <option value="Melodious">2</option>
+            <option value="Noble Knight">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
