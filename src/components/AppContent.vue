@@ -2,12 +2,20 @@
 import AppNav from "./AppNav.vue";
 import CardItem from "./CardItem.vue";
 
+import { store } from "../store.js";
+
 export default {
     name: 'AppContent',
 
     components:  {
         AppNav,
         CardItem,
+    },
+
+    data() {
+        return {
+            store,
+        }
     },
 }
 

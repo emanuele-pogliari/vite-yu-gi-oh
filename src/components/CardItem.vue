@@ -1,4 +1,5 @@
 <script>
+
 export default {
     name: 'CardItem',
 
@@ -7,7 +8,6 @@ export default {
 </script>
 
 <template>
-card item
 </template>
 
 <style lang="scss">
