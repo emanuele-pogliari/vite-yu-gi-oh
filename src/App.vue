@@ -10,7 +10,6 @@ export default {
   
   data() {
     return {
-      cards: [],
 
       store,
     }
@@ -30,8 +29,6 @@ export default {
   },
 }
 
-
-
 </script>
 
 <template>
@@ -41,6 +38,7 @@ export default {
 </template>
 
 <style lang="scss">
+
 
 
 </style>
