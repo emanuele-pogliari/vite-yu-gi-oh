@@ -30,10 +30,13 @@ export default {
 
     width: calc(100% / 5 - $cardsGap / 5 * 4);
     text-transform: uppercase;
-    background-color: #D48F38;
+    background-color: #2e95d0;;
 
     border-radius:10px;
     overflow-y: hidden;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+    
 
     .title-card{
         color: white;

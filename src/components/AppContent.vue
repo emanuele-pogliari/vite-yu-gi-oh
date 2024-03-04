@@ -53,7 +53,7 @@ export default {
 <style lang="scss">
 @use '../styles/variables' as *;
 .content{
-  background-color: #D48F38;
+  background-color: #2e95d0;
   padding-top: 35px;
 
   .select-container{
@@ -78,7 +78,8 @@ export default {
     margin: 0 auto;
 
     padding: 70px;
-    background-color: white;
+    border-radius: 20px;
+    
   }
   
   ul {
