@@ -2,7 +2,9 @@
 import AppNav from "./AppNav.vue";
 import CardItem from "./CardItem.vue";
 import AppPagination from "./AppPagination.vue";
+import AppSelect from "./AppSelect.vue";
 
+import axios from 'axios';
 import { store } from "../store.js";
 
 export default {
@@ -12,12 +14,18 @@ export default {
         AppNav,
         CardItem,
         AppPagination,
+        AppSelect,
     },
 
     data() {
         return {
             store,
         }
+    },
+
+    methods: {
+
+
     },
 }
 
@@ -28,15 +36,7 @@ export default {
 
 <div class="content">
     
-    <div class="select-container">
-        <select name="archetype" id="">
-            <option value="Alien">Alien</option>
-            <option value="Melodious">2</option>
-            <option value="Noble Knight">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-    </div>
+   <AppSelect ></AppSelect>
     
     <div class="inner-container">
         <AppPagination></AppPagination>
