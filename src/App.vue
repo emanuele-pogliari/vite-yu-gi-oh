@@ -28,6 +28,15 @@ export default {
         this.isLoading = false;
     }).catch(err => {
       console.log(err)
+    }),
+
+    axios
+      .get(`https://db.ygoprodeck.com/api/v7/archetypes.php`)    
+      .then(res => {
+        this.store.archetype = res.data;
+        console.log(this.store.archetype)
+    }).catch(err => {
+      console.log(err)
     })
 
   },

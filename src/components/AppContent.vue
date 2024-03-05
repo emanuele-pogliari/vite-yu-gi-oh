@@ -24,9 +24,22 @@ export default {
     },
 
     methods: {
+      searchCard() {
+        console.log("search in progress")
 
+        axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
+        .then(res => {
+        console.log(res.data)
+        this.store.archetype = res.data;
+      
+        });
+      },
 
     },
+
+    created(){
+      this.searchCard
+    }
 }
 
 </script>
@@ -36,7 +49,7 @@ export default {
 
 <div class="content">
     
-   <AppSelect ></AppSelect>
+   <AppSelect @search="searchCard()"></AppSelect>
     
     <div class="inner-container">
         <AppPagination></AppPagination>
