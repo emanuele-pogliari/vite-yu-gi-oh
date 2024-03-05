@@ -28,13 +28,17 @@ export default {
 
     methods:{
     filter() {
-        console.log("search in progress")
-
-        axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0&archetype=" + this.store.archeSearch)
+        if(this.store.archeSearch == 0){
+          axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0")
+          .then(res => {
+          this.store.cards = res.data.data;
+        });
+        } else{
+          axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=" + this.store.archeSearch)
         .then(res => {
-        console.log(res.data)
         this.store.cards = res.data.data;
         });
+        }
       },
   },
 
