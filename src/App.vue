@@ -4,10 +4,12 @@ import AppContent from './components/AppContent.vue';
 import AppLoader from './components/AppLoader.vue';
 import {store} from './store.js';
 
+
 export default {
   components: {
     AppContent,
     AppLoader,
+    
   },
   
   data() {
@@ -18,6 +20,9 @@ export default {
 
     }
   },
+
+
+ 
 
   created() {
     
@@ -40,6 +45,7 @@ export default {
     })
 
   },
+  
 }
 
 </script>

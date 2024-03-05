@@ -5,6 +5,8 @@ import AppPagination from "./AppPagination.vue";
 import AppSelect from "./AppSelect.vue";
 
 import axios from 'axios';
+
+
 import { store } from "../store.js";
 
 export default {
@@ -15,6 +17,7 @@ export default {
         CardItem,
         AppPagination,
         AppSelect,
+        
     },
 
     data() {
@@ -23,23 +26,18 @@ export default {
         }
     },
 
-    methods: {
-      searchCard() {
+    methods:{
+    filter() {
         console.log("search in progress")
 
-        axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
+        axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0&archetype=" + this.store.archeSearch)
         .then(res => {
         console.log(res.data)
-        this.store.archetype = res.data;
-      
+        this.store.cards = res.data.data;
         });
       },
+  },
 
-    },
-
-    created(){
-      this.searchCard
-    }
 }
 
 </script>
@@ -49,7 +47,7 @@ export default {
 
 <div class="content">
     
-   <AppSelect @search="searchCard()"></AppSelect>
+  <AppSelect @search="filter()"></AppSelect>
     
     <div class="inner-container">
         <AppPagination></AppPagination>
